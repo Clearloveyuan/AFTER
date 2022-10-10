@@ -7,6 +7,7 @@ Submitted to ICASSP 2023.
  - Pytorch 1.9.0+cu111
  - Pytorch-lightning 1.7.4 
  - Transformers 4.10.0
+
 To easily reproduce our results, you can install the environments by
 ```
 pip install -r requirements.txt
