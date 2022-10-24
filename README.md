@@ -15,13 +15,25 @@ Submitted to ICASSP 2023.
  - Pytorch-lightning 1.7.4 
  - Transformers 4.10.0
 
+
+## Install
 To easily reproduce our results, you can install the environments by
 ```
 pip install -r requirements.txt
 ```
 
+## Usage
+
+```
+pip install -r requirements.txt
+```
  
 
-# Contributing
-## Contributors
+## Contributing
+### Contributors
 This project exists thanks to all the people who contribute.
+
+
+## License
+
+[MIT](LICENSE) © Richard Littauer
