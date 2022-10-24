@@ -54,6 +54,7 @@ The different Active Learning methods can be chenged here
 
 ## Contributing
 This project exists thanks to all the people who contribute.
+
 <a href="https://github.com/wykst"> <img src="pics/profile/wang.png"  width="80" >  </a>
 
 ## Thanks
