@@ -55,7 +55,7 @@ The different Active Learning methods can be chenged here
 ## Contributing
 This project exists thanks to all the people who contribute.
 
-<a href="[https://github.com/yizhen20133868](https://github.com/wykstc)"> <img src="pics/profile/wang.png"  width="80" >  </a> 
+<a href="[https://github.com/wykst]"> <img src="pics/profile/wang.png"  width="80" >  </a> 
 
 
 
