@@ -54,7 +54,7 @@ The different Active Learning methods can be chenged here
 
 ## Contributing
 This project exists thanks to all the people who contribute.
-<a href="https://github.com/wykst"> <img src="pics/profile/LiboQin.png"  width="80" >  </a>
+<a href="https://github.com/wykst"> <img src="pics/profile/wang.png"  width="80" >  </a>
 
 ## Thanks
 We thanks xxx et al. for providing automativcally pretrained speech recognition [Wav2vec2.0](https://huggingface.co/docs/transformers/model_doc/wav2vec2) model for us.
