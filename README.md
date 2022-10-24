@@ -66,4 +66,4 @@ We thanks the framework proposed by Li-Wei Chen et al. and [their work](https://
 
 ## License
 
-[MIT](LICENSE) © Richard Littauer
+[MIT](LICENSE)
