@@ -24,13 +24,35 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Step One
+
+Task Adaptation Pre-training process on IEMOCAP
+
 ```
-pip install -r requirements.txt
+bash bin/run_exp_iemocap_baseline.sh Dataset/IEMOCAP/Audio_16k/Dataset/IEMOCAP/labels_sess/label_2.json output_iemocap_train 2 TAPT 1
 ```
- 
+
+### Step Two
+
+Calculate how many clusters in the dataset
+
+```
+python clustering.py --datadir Dataset/IEMOCAP/Audio_16k/ --labeldir Dataset/IEMOCAP/Audio_16k/Dataset/IEMOCAP/labels_sess/label_2.json
+```
+
+### Step Three
+
+```
+bash bin/run_exp_iemocap_vft.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_c_margin 1 V-FT 1 clustering
+```
+
+#### Notions
+
+The different Active Learning methods can be chenged here
+
+
 
 ## Contributing
-### Contributors
 This project exists thanks to all the people who contribute.
 
 <a href="[https://github.com/yizhen20133868](https://github.com/wykstc)"> <img src="pics/profile/wang.png"  width="80" >  </a> 
@@ -38,8 +60,11 @@ This project exists thanks to all the people who contribute.
 
 
 ## Thanks
-We thanks the framework proposed by xxx et al. and their work(website).
+We thanks xxx et al. for providing automativcally pretrained speech recognition [Wav2vec2.0](https://huggingface.co/docs/transformers/model_doc/wav2vec2) model for us.
 
+We thanks William Falcon et al. for their [Pytorch-Lighting Tool](https://www.pytorchlightning.ai/team)
+
+We thanks the framework proposed by Li-Wei Chen et al. and [their work](https://arxiv.org/pdf/2110.06309.pdf).
 
 ## License
 
