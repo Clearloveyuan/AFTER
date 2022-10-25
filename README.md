@@ -37,13 +37,24 @@ bash bin/run_exp_iemocap_baseline.sh Dataset/IEMOCAP/Audio_16k/Dataset/IEMOCAP/l
 Calculate how many clusters in the dataset
 
 ```
-python clustering.py --datadir Dataset/IEMOCAP/Audio_16k/ --labeldir Dataset/IEMOCAP/Audio_16k/Dataset/IEMOCAP/labels_sess/label_2.json
+CUDA_VISIBLE_DEVICES=0 python clustering.py --datadir Dataset/IEMOCAP/Audio_16k/ --labeldir Dataset/IEMOCAP/labels_original_sess/label_2.json --save_name iemocap_train
 ```
+
+If you face the problem ImportError: cannot import name 'Wav2Vec2ForXVector' from 'transformers'
+You could update your transformers version to **4.22.1**
+
 
 ### Step Three
 
+
+* Run with **Random** as initialization for Active Learning method
 ```
-bash bin/run_exp_iemocap_vft.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_c_margin 1 V-FT 1 clustering
+bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 0 TAPT 1 random
+```
+
+* Run with **Clustering** as initialization for Active Learning method
+```
+bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 3 TAPT 1 random output_iemocap_train_1/last.ckpt Least_confidence
 ```
 
 #### Notions
@@ -55,7 +66,7 @@ The different Active Learning methods can be chenged here
 ## Contributing
 This project exists thanks to all the people who contribute.
 
-<a href="https://github.com/wykst"> <img src="pics/profile/wang.png"  width="80" >  </a>
+<a href="https://github.com/wykstc"> <img src="pics/profile/wang.png"  width="80" >  </a>
 
 ## Thanks
 We thanks xxx et al. for providing automativcally pretrained speech recognition [Wav2vec2.0](https://huggingface.co/docs/transformers/model_doc/wav2vec2) model for us.
