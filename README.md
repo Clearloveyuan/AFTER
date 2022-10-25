@@ -59,8 +59,15 @@ bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_se
 
 #### Notions
 
-The different Active Learning methods can be chenged here
-
+The different Active Learning methods are listed here
+<ul>
+<li>Entropy</li>
+<li>Least_confidence</li>
+<li>alps</li>
+<li>margin_confidence</li>
+<li>bald</li>
+<li>badge</li>
+</ul>
 
 
 ## Contributing
@@ -77,4 +84,4 @@ We thanks the framework proposed by Li-Wei Chen et al. and [their work](https://
 
 ## License
 
-[MIT](LICENSE)
+MIT LICENSE
