@@ -48,7 +48,7 @@ bash bin/run_exp_iemocap_baseline.sh Dataset/IEMOCAP/Audio_16k/Dataset/IEMOCAP/l
 Calculate how many clusters in the dataset
 
 ```
-CUDA_VISIBLE_DEVICES=0 python clustering.py --datadir Dataset/IEMOCAP/Audio_16k/ --labeldir Dataset/IEMOCAP/labels_original_sess/label_2.json --save_name iemocap_train
+CUDA_VISIBLE_DEVICES=2 python clustering.py --datadir Dataset/IEMOCAP/Audio_16k/ --labeldir Dataset/IEMOCAP/labels_original_sess/label_2.json --save_name iemocap_train
 ```
 
 If you face the problem ImportError: cannot import name 'Wav2Vec2ForXVector' from 'transformers'
