@@ -22,6 +22,17 @@ To easily reproduce our results, you can install the environments by
 pip install -r requirements.txt
 ```
 
+## Prepare IEMOCAP
+Obtain [IEMOCAP](https://sail.usc.edu/iemocap/) from USC
+```
+cd Dataset/IEMOCAP &&
+python make_16k.py IEMOCAP_DIR &&
+python gen_meta_label.py IEMOCAP_DIR &&
+python generate_labels_sessionwise.py &&
+cd ../..
+```
+
+
 ## Usage
 
 ### Step One
