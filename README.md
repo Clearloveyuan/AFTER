@@ -49,12 +49,12 @@ You could update your transformers version to **4.22.1**
 
 * Run with **Random** as initialization for Active Learning method
 ```
-bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 0 TAPT 1 random
+bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 3 TAPT 1 random output_iemocap_train_1/last.ckpt Least_confidence
 ```
 
 * Run with **Clustering** as initialization for Active Learning method
 ```
-bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 3 TAPT 1 random output_iemocap_train_1/last.ckpt Least_confidence
+bash bin/TAPT_full_train.sh Dataset/IEMOCAP/Audio_16k/ Dataset/IEMOCAP/labels_sess_new/label_2.json output_full_1 3 TAPT 1 clustering output_iemocap_train_1/last.ckpt Entropy
 ```
 
 #### Notions
