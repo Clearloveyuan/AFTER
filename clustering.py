@@ -52,7 +52,7 @@ pool_loader = DataLoader(dataset=dataset.train_dataset,
                 batch_size=args.batch_size,
                 shuffle=False,
                 num_workers=args.nworkers)
-breakpoint()
+
 sample = torch.zeros(1,512).to(device)
 for batch in pool_loader:
     feats, length, label = batch
@@ -60,28 +60,16 @@ for batch in pool_loader:
     with torch.no_grad():
         embeddings = model(feats).embeddings
         sample = torch.cat((sample, embeddings),0)
-breakpoint()
+
 sample=sample.to("cpu")
 idx = 0
 sample = sample[torch.arange(sample.size(0))!=0] 
 np.save(args.save_name,sample)
-breakpoint()
-#breakpoint()
+
 
 
 sample = np.load(args.save_name+".npy", allow_pickle=True)
-#breakpoint()
-#visualizer = RadViz(size=(756, 504))
-#model = KMeans()
-#visualizer = KElbowVisualizer(model, k=(1,8))
-#breakpoint()
-#visualizer.fit(sample)
-breakpoint()
 model = KElbowVisualizer(KMeans(), k=(1,8))
 breakpoint()
 model.fit(sample)
-breakpoint()
 print(model.elbow_value_)
-   
-#visualizer.show(outpath="Clustering.pdf")       
-#breakpoint()
